@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 public class UserService {
     @Autowired
     private UserRepository users;
-//получить юзера по id
-    //получить корзину юзера в виде {things:{name:'',qventity:'',price:''},{...},....,total:''}
-    //получить
+//    выдать профиль юзера по его логину
+//    выдать все записи данного юзера
+//    выдать конкретную запись данного юзраа
+//    GET /person/{login}/backet/{token} -                                  выдать корзину юзера по его логину
+//удаление всех клиентов
+    //удалить конкретного клинта
 }

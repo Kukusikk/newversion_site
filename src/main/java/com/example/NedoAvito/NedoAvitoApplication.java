@@ -1,6 +1,6 @@
 package com.example.NedoAvito;
 
-import com.example.NedoAvito.entity.Advertisement;
+
 import com.example.NedoAvito.entity.User;
 import com.example.NedoAvito.repository.AdvertisementRepository;
 import com.example.NedoAvito.repository.UserRepository;
@@ -9,6 +9,8 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import javax.validation.constraints.Null;
 
 @SpringBootApplication
 public class NedoAvitoApplication implements ApplicationRunner {
@@ -22,9 +24,6 @@ public class NedoAvitoApplication implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		User a=new User("k", "ko", "gggggu");
-
-	//	rec.save(a);
 
 
 

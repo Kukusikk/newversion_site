@@ -19,7 +19,7 @@ public class UserSecure {
     private int ttltoken;
     //токен используется когда срок жизни используемого токена подошел к концу, чтобы повторно не вводить логин/пароль
     private String renewaltoken;
-
+    public UserSecure(){}
     public UserSecure(String login, @NotNull String password) {
         this.login = login;
         this.password = password;

@@ -1,9 +1,17 @@
 package com.example.NedoAvito.dao.Advertisement;
 
 
+import com.example.NedoAvito.entity.User;
+
+import java.util.List;
+import java.util.Optional;
 
 //интерфейс доступа к данным базы данных
 public interface AdvertisementDao {
+
+
+
+
 
     //показать все записи
 //    //показать 10 самых популярных записей

@@ -22,22 +22,26 @@ public class User {
     //одно объявление может быть во многих корзинах
     //в одной корзине может быть много объявлений
     //однонаправленный
-    @ManyToMany
-    @JoinTable(name = "USER_Advertisement",
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "Users_Advertisements",
             joinColumns = { @JoinColumn(name = "login") },
             inverseJoinColumns = { @JoinColumn(name = "id") })
     private Set<Advertisement> cart = new HashSet<>();
 
-    public User( String login, String phone, String photo) {
+
+    public User(String login, String phone, String photo, Set<Advertisement> cart, Set<Advertisement> advertisements) {
         this.login = login;
         this.phone = phone;
         this.photo = photo;
-
+        this.cart = cart;
+        this.advertisements = advertisements;
     }
+    public User(){}
 
     //ссылки на объявления этого пользователя
     //один пользователь имеет много объявлений. одно объявление имеет одного хозяина
-    @OneToMany
+    //при удалении юзера автоматом удалять все его сообщения
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Advertisement> advertisements = new HashSet<>();
 
     public String getLogin() {

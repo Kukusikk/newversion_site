@@ -1,4 +1,4 @@
 package com.example.NedoAvito.servis;
 
-public class RecordServis {
+public class TagService {
 }

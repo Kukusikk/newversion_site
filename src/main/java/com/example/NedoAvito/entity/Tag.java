@@ -11,16 +11,17 @@ public class Tag {
   //  @Column(name="id")
     private String name;
     //дочернии тэги
-    @OneToMany
+    //при удалении родительского тэга должны удаляться дочернии
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Tag> childCategory = new HashSet<>();
     //количество просмотров
     private int numberviews;
     //каким объявлениям принадлежат
     //объявление принадлежит одному тэгу
     //один тэг принадлежит многим объявлениям
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private Set<Advertisement> advertisements=new HashSet<>();
-
+    public Tag(){}
     public String getName() {
         return name;
     }

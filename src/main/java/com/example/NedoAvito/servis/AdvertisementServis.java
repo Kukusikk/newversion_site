@@ -1,4 +1,4 @@
 package com.example.NedoAvito.servis;
 
-public class CategoryService {
+public class AdvertisementServis {
 }

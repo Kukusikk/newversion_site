@@ -13,7 +13,7 @@ public class Advertisement {
     private int id;//номер в общем риестре записей
   //  много объявлений принадлежат одному юзеру
     @NotNull
-    @OneToOne (cascade = CascadeType.ALL)//при удалении пользователя удаляются его объявления
+    @OneToOne (fetch = FetchType.EAGER)//при удалении пользователя удаляются его объявления
     @JoinColumn(name = "id")
     private User user;
     private int idForUser;//номер относительно ее автора
@@ -25,9 +25,10 @@ public class Advertisement {
     //количество просмотров
     private int numberviews;
     //много объявлений принадлежат одному тэгу
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id")
     private Tag tag;
+    public Advertisement(){}
 
     public Advertisement(@NotNull User user) {
 
