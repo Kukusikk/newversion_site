@@ -2,10 +2,12 @@ package com.example.NedoAvito.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 //класс для авторизации и регистрации клиента
 @Entity
+@Table(name = "UsersSecure")
 public class UserSecure {
     @Id
     private String login;

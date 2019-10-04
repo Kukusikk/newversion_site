@@ -24,7 +24,7 @@ public class NedoAvitoApplication implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {
 		User a=new User("k", "ko", "gggggu");
 
-		rec.save(a);
+	//	rec.save(a);
 
 
 

@@ -9,7 +9,7 @@ import java.util.Set;
 
 //класс клиента
 @Entity
-@Table(name = "User1")
+@Table(name = "Users")
 public class User {
     @Id
 //    @Column(name="login")
