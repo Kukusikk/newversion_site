@@ -24,8 +24,8 @@ public class AdvertisementServis {
     return advertisementdao.findAllByOrderByNumberviewsDesc().stream().limit(10).collect(Collectors.toList());
     }
 //выдать конкретную запись по ее id
- public  Optional<Advertisement> findById(UUID id){return advertisementdao.findById(id);}
-// выдать все записи по заданному в поисковике фильтру(категория,подкатегория( default=all) цена имя описание начиная с самых популярных
+// public  Optional<Advertisement> findById(UUID id){return advertisementdao.findById(id);}
+//// выдать все записи по заданному в поисковике фильтру(категория,подкатегория( default=all) цена имя описание начиная с самых популярных
 //    public List<Advertisement>filtersearch(Filter filter){
 //
 //        List<Advertisement> advertisements = new ArrayList<>();

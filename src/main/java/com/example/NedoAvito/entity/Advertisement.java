@@ -29,6 +29,7 @@ public class Advertisement {
     //много объявлений принадлежат одному тэгу
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idAdvertisement")
+    //одно и то же объявление не может входить в несколько подкатегорий родительского дерева - всегда только в одну, здесб же у нас указатель на самую младшую подкатегорию категории
     private Tag tag;
     //дата создания объевления
     private Date date;

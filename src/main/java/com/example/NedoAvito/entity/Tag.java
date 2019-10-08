@@ -14,6 +14,9 @@ public class Tag {
     private UUID idtag;
     @Column(unique=true)
     private String name;
+    //родительский тэг
+    @OneToOne
+    private Tag parenttag;
     //дочернии тэги
     //при удалении родительского тэга должны удаляться дочернии
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -26,6 +29,14 @@ public class Tag {
     @OneToMany(fetch = FetchType.EAGER)
     private Set<Advertisement> advertisements=new HashSet<>();
     public Tag(){}
+
+    public Tag getParenttag() {
+        return parenttag;
+    }
+
+    public void setParenttag(Tag parenttag) {
+        this.parenttag = parenttag;
+    }
 
     public UUID getIdtag() {
         return idtag;
