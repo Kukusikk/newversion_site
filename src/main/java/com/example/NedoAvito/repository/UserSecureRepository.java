@@ -6,8 +6,10 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.UUID;
+
 @Repository
-public  interface  UserSecureRepository extends CrudRepository<UserSecure, String> {
+public  interface  UserSecureRepository extends CrudRepository<UserSecure, UUID> {
     //добавить юзера
     //удалить юзера с данным логином
     //изменить пароль юзера с данным логином

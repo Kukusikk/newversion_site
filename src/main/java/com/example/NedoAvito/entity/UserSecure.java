@@ -1,15 +1,17 @@
 package com.example.NedoAvito.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.UUID;
 
 //класс для авторизации и регистрации клиента
 @Entity
 @Table(name = "UsersSecure")
 public class UserSecure {
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private UUID idusersecure;
+    @Column(unique=true)
     private String login;
     @NotNull
     private String password;
@@ -26,6 +28,14 @@ public class UserSecure {
         this.usedtoken = "";
         this.ttltoken = 0;
         this.renewaltoken = "";
+    }
+
+    public UUID getIdusersecure() {
+        return idusersecure;
+    }
+
+    public void setIdusersecure(UUID idusersecure) {
+        this.idusersecure = idusersecure;
     }
 
     public String getLogin() {

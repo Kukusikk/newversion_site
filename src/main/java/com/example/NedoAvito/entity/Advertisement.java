@@ -2,7 +2,9 @@ package com.example.NedoAvito.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "Advertisements")
@@ -10,11 +12,11 @@ public class Advertisement {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
  //   @Column(name="id")
-    private int id;//номер в общем риестре записей
+    private UUID idAdvertisement;//номер в общем риестре записей
   //  много объявлений принадлежат одному юзеру
     @NotNull
     @OneToOne (fetch = FetchType.EAGER)//при удалении пользователя удаляются его объявления
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "idAdvertisement")
     private User user;
     private int idForUser;//номер относительно ее автора
     private int price;
@@ -26,12 +28,30 @@ public class Advertisement {
     private int numberviews;
     //много объявлений принадлежат одному тэгу
     @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "idAdvertisement")
     private Tag tag;
+    //дата создания объевления
+    private Date date;
     public Advertisement(){}
 
-    public Advertisement(@NotNull User user) {
+    public UUID getIdAdvertisement() {
+        return idAdvertisement;
+    }
 
+    public void setIdAdvertisement(UUID idAdvertisement) {
+        this.idAdvertisement = idAdvertisement;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Advertisement(@NotNull User user) {
+        this.date=new Date();
         this.user = user;
         this.idForUser = 8;
         this.price = 6;
@@ -41,12 +61,12 @@ public class Advertisement {
 
     }
 
-    public int getId() {
-        return id;
+    public UUID getId() {
+        return idAdvertisement;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(UUID idAdvertisement) {
+        this.idAdvertisement = idAdvertisement;
     }
 
     public User getUser() {

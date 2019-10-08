@@ -1,31 +1,34 @@
 package com.example.NedoAvito.dao.Advertisement;
 
 
+import com.example.NedoAvito.entity.Advertisement;
 import com.example.NedoAvito.entity.User;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 //интерфейс доступа к данным базы данных
 public interface AdvertisementDao {
+    //показать все объявления
+    List<Advertisement> findAll();
+    //сохранить объявление
+    Advertisement save(Advertisement advertisement);
+    //показать объявление по его id
+    Optional<Advertisement> findById(UUID id);
+    //удаление объявления с заданным id
+    void deleteById(UUID id);
+    //удаление объявления
+    void delete(Advertisement advertisement);
+    //удаление всех постов юзера
+    void deleteByUser(User user);
+    // удаление объявление с заданным id относительно юзера
+    void deleteByUserAndIdForUser(User user, Integer idForUser);
+    //выдать все объявления сортированные по количеству просмотров
+    List<Advertisement> findAllByOrderByNumberviewsDesc();
+    //выдать все объявления по новизне(от самых новых)
+    List<Advertisement> findAllByOrderByDateAsc();
+    //выдать объявления по цене(от самых дешевых)
+    List<Advertisement> findAllByOrderByPriceAsc();
 
-
-
-
-
-    //показать все записи
-//    //показать 10 самых популярных записей
-//    @Query("select * from Record ORDER BY numberviews DESC LIMIT 10")
-//    List<Record> findPopular();
-//    //сохранить запись
-//    Record save(Record record);
-//
-//    //удаление всех постов юзера
-//    void deleteAllByUser(User user);
-//    // удаление заданного поста заданного юзера
-//    void deleteByidForUserAndUser;
-//    //показать запись по id записи
-//    Optional<Record> findById(Integer id);
-//    //показать все записи юзера
-    //показать заданную запись по заданному юзеру(используется id относительно юзера)
 }

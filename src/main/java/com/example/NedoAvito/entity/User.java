@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 //класс клиента
 @Entity
@@ -13,6 +14,9 @@ import java.util.Set;
 public class User {
     @Id
 //    @Column(name="login")
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private UUID iduser;
+    @Column(unique=true)
     private String login;
     private String phone;
     //ссылка на фото
@@ -24,8 +28,8 @@ public class User {
     //однонаправленный
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "Users_Advertisements",
-            joinColumns = { @JoinColumn(name = "login") },
-            inverseJoinColumns = { @JoinColumn(name = "id") })
+            joinColumns = { @JoinColumn(name = "iduser") },
+            inverseJoinColumns = { @JoinColumn(name = "idAdvertisement") })
     private Set<Advertisement> cart = new HashSet<>();
 
 
@@ -43,6 +47,14 @@ public class User {
     //при удалении юзера автоматом удалять все его сообщения
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Advertisement> advertisements = new HashSet<>();
+
+    public UUID getIduser() {
+        return iduser;
+    }
+
+    public void setIduser(UUID iduser) {
+        this.iduser = iduser;
+    }
 
     public String getLogin() {
         return login;
