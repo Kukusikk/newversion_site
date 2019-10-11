@@ -2,6 +2,7 @@ package com.example.NedoAvito.dao.Advertisement;
 
 
 import com.example.NedoAvito.entity.Advertisement;
+import com.example.NedoAvito.entity.Tag;
 import com.example.NedoAvito.entity.User;
 import com.example.NedoAvito.repository.AdvertisementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 @Component
 public class AdvertisementDaoImpl implements AdvertisementDao {
@@ -34,5 +36,11 @@ public class AdvertisementDaoImpl implements AdvertisementDao {
     public List<Advertisement> findAllByOrderByDateAsc(){return advertisementRepository.findAllByOrderByDateAsc();}
     //выдать объявления по цене(от самых дешевых)
     public List<Advertisement> findAllByOrderByPriceAsc(){return advertisementRepository.findAllByOrderByPriceAsc();}
+
+
+
+    public List<Advertisement> findByFilterByDate(String name, int topprice, int lowprice, Set<Tag> tags){return advertisementRepository.findByFilterByDate( name,  topprice,  lowprice,tags);}
+    public List<Advertisement> findByFilterByNumberviews( String name, int topprice, int lowprice, Set<Tag> tags){return advertisementRepository.findByFilterByNumberviews( name,  topprice,  lowprice,tags);}
+    public List<Advertisement> findByFilterByPrice( String name, int topprice, int lowprice, Set<Tag> tags){return advertisementRepository.findByFilterByPrice( name,  topprice,  lowprice,tags);}
 
 }

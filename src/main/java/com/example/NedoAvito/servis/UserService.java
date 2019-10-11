@@ -24,19 +24,15 @@ public class UserService {
         return userdao.findAll();
     }
 
-    //    выдать профиль юзера по его id
+    // выдать профиль клиента по его id
     public Optional<User> findById(UUID iduser) {
         return userdao.findById(iduser);
     }
-
-    ;
 
     //выдать клиента по логину(уникальному ключу)
     public Optional<User> findByLogin(String login) {
         return userdao.findByLogin(login);
     }
-
-    ;
 
     //выдать все записи данного юзера
     public Set<Advertisement> findByLoginAdvertisements(String login) {
@@ -44,7 +40,7 @@ public class UserService {
         return u.getAdvertisements();
     }
 
-    //    выдать конкретную запись данного юзраа
+    //    выдать конкретное объявление данного клиента
     public Advertisement findByLoginAdvertisementById(String login, UUID id) {
         User u = userdao.findByLogin(login).orElse(new User());
         for (Advertisement advertisement : u.getAdvertisements()) {
@@ -57,7 +53,7 @@ public class UserService {
     }
 
 
-    //     выдать корзину юзера по его логину
+    //выдать корзину клиента по его логину
     public Set<Advertisement> findByLoginCart(String login) {
         User u = userdao.findByLogin(login).orElse(new User());
         return u.getCart();

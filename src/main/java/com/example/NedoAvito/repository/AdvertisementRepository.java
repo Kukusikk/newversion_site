@@ -1,7 +1,9 @@
 package com.example.NedoAvito.repository;
 
 import com.example.NedoAvito.entity.Advertisement;
+import com.example.NedoAvito.entity.Tag;
 import com.example.NedoAvito.entity.User;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -32,8 +34,16 @@ public  interface AdvertisementRepository extends CrudRepository<Advertisement, 
     List<Advertisement> findAllByOrderByDateAsc();
     //выдать объявления по цене(от самых дешевых)
     List<Advertisement> findAllByOrderByPriceAsc();
-
-
+    //имя, макс ценаб мин цена, список тэгов
+    //выдать объявления отфильтрованныйе по фильтру и количеству просмотров
+    @Query("select a from Advertisement a where a.name = ?1 and ((?2>=0 and a.price<=?2) or (?3>=0 and a.price>=?3)) and (a.tag in ?4 ) order by a.numberviews ")
+    List<Advertisement> findByFilterByNumberviews( String name, int topprice, int lowprice, Set<Tag> tags );
+    //выдать объявления отфильтрованныйе по фильтру и новизне
+    @Query("select a from Advertisement a where a.name = ?1 and ((?2>=0 and a.price<=?2) or (?3>=0 and a.price>=?3)) and (a.tag in ?4 ) order by a.date ")
+    List<Advertisement> findByFilterByDate( String name, int topprice, int lowprice, Set<Tag> tags);
+    //выдать объявления отфильтрованныйе по фильтру и цене
+    @Query("select a from Advertisement a where a.name = ?1 and ((?2>=0 and a.price<=?2) or (?3>=0 and a.price>=?3)) and (a.tag in ?4 ) order by a.price ")
+    List<Advertisement> findByFilterByPrice( String name, int topprice, int lowprice, Set<Tag> tags);
 
 }
 

@@ -2,10 +2,12 @@ package com.example.NedoAvito.dao.Advertisement;
 
 
 import com.example.NedoAvito.entity.Advertisement;
+import com.example.NedoAvito.entity.Tag;
 import com.example.NedoAvito.entity.User;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 //интерфейс доступа к данным базы данных
@@ -30,5 +32,9 @@ public interface AdvertisementDao {
     List<Advertisement> findAllByOrderByDateAsc();
     //выдать объявления по цене(от самых дешевых)
     List<Advertisement> findAllByOrderByPriceAsc();
+
+    List<Advertisement> findByFilterByDate(String name, int topprice, int lowprice, Set<Tag> tags);
+    List<Advertisement> findByFilterByNumberviews( String name, int topprice, int lowprice, Set<Tag> tags);
+    List<Advertisement> findByFilterByPrice( String name, int topprice, int lowprice, Set<Tag> tags);
 
 }

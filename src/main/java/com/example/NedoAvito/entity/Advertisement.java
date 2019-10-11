@@ -17,7 +17,7 @@ public class Advertisement {
     @NotNull
     @OneToOne (fetch = FetchType.EAGER)//при удалении пользователя удаляются его объявления
     @JoinColumn(name = "idAdvertisement")
-    private User user;
+    private User user= new User();
     private int idForUser;//номер относительно ее автора
     private int price;
     @NotNull
@@ -29,10 +29,11 @@ public class Advertisement {
     //много объявлений принадлежат одному тэгу
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idAdvertisement")
-    //одно и то же объявление не может входить в несколько подкатегорий родительского дерева - всегда только в одну, здесб же у нас указатель на самую младшую подкатегорию категории
-    private Tag tag;
+    //здесь хрениться один тэг - самый дочерний
+    private Tag tag= new Tag();
+    //
     //дата создания объевления
-    private Date date;
+    private Date date = new Date();
     public Advertisement(){}
 
     public UUID getIdAdvertisement() {
@@ -52,13 +53,14 @@ public class Advertisement {
     }
 
     public Advertisement(@NotNull User user) {
-        this.date=new Date();
+
         this.user = user;
         this.idForUser = 8;
         this.price = 6;
         this.name = "j";
         this.description = "description";
         this.numberviews = 3;
+
 
     }
 
