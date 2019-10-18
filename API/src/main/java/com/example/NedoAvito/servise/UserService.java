@@ -1,4 +1,4 @@
-package com.example.NedoAvito.servis;
+package com.example.NedoAvito.servise;
 
 import com.example.NedoAvito.dao.User.UserDaoImpl;
 import com.example.NedoAvito.entity.Advertisement;

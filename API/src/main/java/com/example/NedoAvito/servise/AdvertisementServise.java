@@ -1,10 +1,8 @@
-package com.example.NedoAvito.servis;
+package com.example.NedoAvito.servise;
 
 import com.example.NedoAvito.conteiner.Filter;
-import com.example.NedoAvito.conteiner.SortingPrinciple;
 import com.example.NedoAvito.dao.Advertisement.AdvertisementDaoImpl;
 import com.example.NedoAvito.entity.Advertisement;
-import com.example.NedoAvito.entity.Tag;
 import com.example.NedoAvito.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,34 +11,34 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-public class AdvertisementServis {
+public class AdvertisementServise {
     @Autowired
     AdvertisementDaoImpl advertisementdao;
     @Autowired
     TagService tagService;
 
     //сохранить объявление
-    public Advertisement save(Advertisement advertisement) {
+    public Advertisement saveAdvertisement(Advertisement advertisement) {
         return advertisementdao.save(advertisement);
     }
 
     // удалить объявление по ее id
-    public void deleteById(UUID id) {
+    public void deleteAdvertisementById(UUID id) {
         advertisementdao.deleteById(id);
     }
 
     //показать топ  самых популярных 10 объявление
-    public List<Advertisement> findAllByOrderByNumberviewsDesc() {
+    public List<Advertisement> findAdvertisementsByOrderByNumberviewsDesc() {
         return advertisementdao.findAllByOrderByNumberviewsDesc().stream().limit(10).collect(Collectors.toList());
     }
 
     //выдать конкретное объявление по ее id
-    public Optional<Advertisement> findById(UUID id) {
+    public Optional<Advertisement> findAdvertisementById(UUID id) {
         return advertisementdao.findById(id);
     }
 
     // выдать все объявление по заданному в поисковике фильтру
-    public List<Advertisement> filtersearch(Filter filter) {
+    public List<Advertisement> AdvertisementsByFiltersearch(Filter filter) {
         List<Advertisement> advertisements = new ArrayList<>();
 
         switch (filter.getSortingprinciple()) {
@@ -76,17 +74,17 @@ public class AdvertisementServis {
 
 
     // удалить все объявления клиента
-    public void deleteByUser(User user) {
+    public void deleteAdvertisementByUser(User user) {
         advertisementdao.deleteByUser(user);
     }
 
     // удалить конкретное объявление относительно юзера
-    public void deleteByUserAndIdForUser(User user, Integer idForUser) {
+    public void deleteAdvertisementByUserAndIdForUser(User user, Integer idForUser) {
         advertisementdao.deleteByUserAndIdForUser(user, idForUser);
     }
 
     // удалить объявление
-    public void delete(Advertisement advertisement) {
+    public void deleteAdvertisement(Advertisement advertisement) {
         advertisementdao.delete(advertisement);
     }
 }

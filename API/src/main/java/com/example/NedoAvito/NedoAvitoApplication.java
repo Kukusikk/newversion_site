@@ -4,29 +4,21 @@ package com.example.NedoAvito;
 import com.example.NedoAvito.entity.Advertisement;
 import com.example.NedoAvito.entity.Tag;
 import com.example.NedoAvito.entity.User;
-import com.example.NedoAvito.repository.AdvertisementRepository;
-import com.example.NedoAvito.repository.UserRepository;
-import com.example.NedoAvito.servis.AdvertisementServis;
-import com.example.NedoAvito.servis.TagService;
-import com.example.NedoAvito.servis.UserService;
+import com.example.NedoAvito.servise.AdvertisementServise;
+import com.example.NedoAvito.servise.TagService;
+import com.example.NedoAvito.servise.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import javax.validation.constraints.Null;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-import java.util.UUID;
-
 @SpringBootApplication
 public class NedoAvitoApplication implements ApplicationRunner {
     @Autowired
 	TagService tagService;
     @Autowired
-	AdvertisementServis advertisementServis;
+	AdvertisementServise advertisementServis;
     @Autowired
 	UserService userService;
 
@@ -62,9 +54,9 @@ public class NedoAvitoApplication implements ApplicationRunner {
 //
 //		Set<Tag> result=tagService.findAllChildTagsforone(tag0);
 		Advertisement a=new Advertisement(userService.save(new User()));
-		Tag t=tagService.save(new Tag());
-		a.setTag(t);
-		advertisementServis.save(a);
+//		Tag t=tagService.save(new Tag());
+//		a.setTag(t);
+//		advertisementServis.save(a);
 
 		System.out.print("8");
 

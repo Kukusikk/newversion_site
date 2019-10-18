@@ -1,6 +1,5 @@
-package com.example.NedoAvito.servis;
+package com.example.NedoAvito.servise;
 
-import com.example.NedoAvito.dao.Advertisement.AdvertisementDaoImpl;
 import com.example.NedoAvito.dao.Tag.TagDaoImImpl;
 import com.example.NedoAvito.entity.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,16 +20,16 @@ public class TagService {
         return tagDaoIm.save(t);
     }
     //удалить все тэги
-    public void  deleteAll(){tagDaoIm.deleteAll();}
+    public void  deleteAllTags(){tagDaoIm.deleteAll();}
     //удалить конкретный тэг
-    public void delete(Tag tag){tagDaoIm.delete(tag);}
+    public void deleteTag(Tag tag){tagDaoIm.delete(tag);}
     //удалить тэг по id
-    public void deleteById(UUID id){tagDaoIm.deleteById(id);}
+    public void deleteTagById(UUID id){tagDaoIm.deleteById(id);}
     //выдать все тэги
-    public List<Tag> findAll(){ return tagDaoIm.findAll();}
+    public List<Tag> findAllTags(){ return tagDaoIm.findAll();}
 
     //добавить тэг
-    public Tag save(Tag tag){return tagDaoIm.save(tag);}
+    public Tag saveTag(Tag tag){return tagDaoIm.save(tag);}
 
 
 
