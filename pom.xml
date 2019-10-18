@@ -25,6 +25,7 @@
 	<modules>
 		<module>API</module>
 		<module>Secure</module>
+		<module>EurekaServer</module>
 	</modules>
 
 

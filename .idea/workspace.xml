@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="293315ba-fb43-42e2-9d40-9b5b8e265051" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="1RMfmgiDRHLYuKAF7Ack5cJNp7u" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/EurekaServer" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.NedoAvito.servis" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/EurekaServer" />
+      <recent name="$PROJECT_DIR$/Secure" />
+      <recent name="$PROJECT_DIR$/API" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/API" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.NedoAvitoApplication (3)">
+    <configuration name="NedoAvitoApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.NedoAvito.NedoAvitoApplication" />
+      <module name="API" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.NedoAvito.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NedoAvitoApplication (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.NedoAvito.NedoAvitoApplication" />
+      <module name="Secure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.NedoAvito.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NedoAvitoApplication (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.NedoAvito.NedoAvitoApplication" />
+      <module name="EurekaServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.NedoAvito.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NedoAvitoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.NedoAvito.NedoAvitoApplication" />
+      <module name="NedoAvito" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.NedoAvito.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NedoAvito [package]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="demo [spring-boot:run]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NedoAvitoApplication (3)" />
+        <item itemvalue="Application.NedoAvitoApplication (2)" />
+        <item itemvalue="Application.NedoAvitoApplication (1)" />
+        <item itemvalue="Application.NedoAvitoApplication" />
+        <item itemvalue="Maven.NedoAvito [package]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="293315ba-fb43-42e2-9d40-9b5b8e265051" name="Default Changelist" comment="" />
+      <created>1569482045222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569482045222</updated>
+    </task>
+    <task id="LOCAL-00001" summary="MY FIRST COMMIT!">
+      <created>1570180142878</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570180142878</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="MY FIRST COMMIT!" />
+    <option name="LAST_COMMIT_MESSAGE" value="MY FIRST COMMIT!" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="588" y="214" width="1229" height="762" key="#Project_Structure" timestamp="1569483836753">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="214" width="1229" height="762" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1569483836753" />
+    <state x="761" y="239" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1570702353952">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="761" y="239" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1570702353952" />
+    <state x="801" y="239" width="374" height="446" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1570548694328" />
+    <state x="746" y="413" width="494" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1570458396481">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="746" y="413" width="494" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/67.27.1853.1053@67.27.1853.1053" timestamp="1570458396481" />
+    <state x="488" y="27" width="901" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1571387904399">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="488" y="27" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1571387904399" />
+    <state x="538" y="27" width="901" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1570174408940" />
+    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1570194606680">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1570194606680" />
+    <state x="573" y="138" width="831" height="828" key="#demo_[spring-boot:run]" timestamp="1570086960561">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="573" y="138" width="831" height="828" key="#demo_[spring-boot:run]/67.27.1853.1053@67.27.1853.1053" timestamp="1570086960561" />
+    <state x="861" y="256" width="693" height="593" key="#xdebugger.evaluate" timestamp="1570442090540">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="861" y="256" width="693" height="593" key="#xdebugger.evaluate/67.27.1853.1053@67.27.1853.1053" timestamp="1570442090540" />
+    <state x="776" y="310" width="447" height="484" key="FileChooserDialogImpl" timestamp="1570179058257">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="447" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1570179058257" />
+    <state width="1874" height="317" key="GridCell.Tab.0.bottom" timestamp="1571394786440">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="317" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1571394786440" />
+    <state width="1807" height="137" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1570548754484" />
+    <state width="1874" height="317" key="GridCell.Tab.0.center" timestamp="1571394786440">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="317" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1571394786440" />
+    <state width="1807" height="137" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1570548754476" />
+    <state width="1874" height="317" key="GridCell.Tab.0.left" timestamp="1571394786440">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="317" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1571394786440" />
+    <state width="1807" height="137" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1570548754475" />
+    <state width="1874" height="317" key="GridCell.Tab.0.right" timestamp="1571394786440">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="317" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1571394786440" />
+    <state width="1807" height="137" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1570548754480" />
+    <state width="1874" height="414" key="GridCell.Tab.1.bottom" timestamp="1570782999474">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="414" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1570782999474" />
+    <state width="1807" height="272" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1570447891170" />
+    <state width="1874" height="414" key="GridCell.Tab.1.center" timestamp="1570782999474">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="414" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1570782999474" />
+    <state width="1807" height="272" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1570447891169" />
+    <state width="1874" height="414" key="GridCell.Tab.1.left" timestamp="1570782999473">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="414" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1570782999473" />
+    <state width="1807" height="272" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1570447891169" />
+    <state width="1874" height="414" key="GridCell.Tab.1.right" timestamp="1570782999474">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="414" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1570782999474" />
+    <state width="1807" height="272" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1570447891170" />
+    <state x="466" y="187" key="SettingsEditor" timestamp="1570085915986">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="466" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1570085915986" />
+    <state x="603" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1571393098678">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="603" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1571393098678" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1570541146822" />
+    <state x="700" y="450" width="509" height="205" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" timestamp="1570796097871">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="700" y="450" width="509" height="205" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/0.27.1920.1053@0.27.1920.1053" timestamp="1570796097871" />
+    <state x="458" y="291" width="1061" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1570094430578">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="458" y="291" width="1061" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1053@67.27.1853.1053" timestamp="1570094430578" />
+    <state x="624" y="253" key="run.anything.popup" timestamp="1570702371431">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="624" y="253" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1570702371431" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1570456977808">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1570456977808" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/servise/UserService.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/servise/TagService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/NedoAvitoApplication.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/NedoAvitoApplication.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/servise/UserService.java</url>
+          <line>27</line>
+          <properties class="com.example.NedoAvito.servise.UserService" method="findById">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/servise/UserService.java</url>
+          <line>43</line>
+          <properties class="com.example.NedoAvito.servise.UserService" method="findByLoginAdvertisementById">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
