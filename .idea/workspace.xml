@@ -2,8 +2,111 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="293315ba-fb43-42e2-9d40-9b5b8e265051" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/API.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/NedoAvitoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/conteiner/Filter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/conteiner/SortingPrinciple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/dao/Advertisement/AdvertisementDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/dao/Advertisement/AdvertisementDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/dao/Tag/TagDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/dao/Tag/TagDaoImImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/dao/User/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/dao/User/UserDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/entity/Advertisement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/entity/Tag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/repository/AdvertisementRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/repository/TagRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/servise/AdvertisementServise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/servise/TagService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/java/com/example/NedoAvito/servise/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/test/java/com/example/NedoAvito/NedoAvitoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/API-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/API-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/NedoAvitoApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/conteiner/Filter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/conteiner/SortingPrinciple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/dao/Advertisement/AdvertisementDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/dao/Advertisement/AdvertisementDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/dao/Tag/TagDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/dao/Tag/TagDaoImImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/dao/User/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/dao/User/UserDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/dao/UserSecure/UserSecureDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/dao/UserSecure/UserSecureDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/entity/Advertisement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/entity/Tag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/entity/UserSecure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/repository/AdvertisementRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/repository/TagRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/repository/UserSecureRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/servis/AdvertisementServis$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/servis/AdvertisementServis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/servis/TagService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/servis/UserSecureService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/classes/com/example/NedoAvito/servis/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/target/test-classes/com/example/NedoAvito/NedoAvitoApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/EurekaServer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/src/main/java/com/example/NedoAvito/NedoAvitoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/src/test/java/com/example/NedoAvito/NedoAvitoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/target/EurekaServer-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/target/EurekaServer-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/target/classes/com/example/NedoAvito/NedoAvitoApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/target/test-classes/com/example/NedoAvito/NedoAvitoApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NedoAvito.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/Secure.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/src/main/java/com/example/NedoAvito/NedoAvitoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/src/main/java/com/example/NedoAvito/dao/UserSecure/UserSecureDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/src/main/java/com/example/NedoAvito/dao/UserSecure/UserSecureDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/src/main/java/com/example/NedoAvito/entity/UserSecure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/src/main/java/com/example/NedoAvito/repository/UserSecureRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/src/main/java/com/example/NedoAvito/servise/UserSecureService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/src/test/java/com/example/NedoAvito/NedoAvitoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/Secure-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/Secure-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/classes/META-INF/Secure.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/classes/com/example/NedoAvito/NedoAvitoApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/classes/com/example/NedoAvito/dao/UserSecure/UserSecureDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/classes/com/example/NedoAvito/dao/UserSecure/UserSecureDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/classes/com/example/NedoAvito/entity/UserSecure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/classes/com/example/NedoAvito/repository/UserSecureRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/classes/com/example/NedoAvito/servise/UserSecureService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Secure/target/test-classes/com/example/NedoAvito/NedoAvitoApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/NedoAvito.kotlin_module" beforeDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,11 +139,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/EurekaServer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/pom.xml" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -54,6 +157,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/API" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.NedoAvitoApplication (3)">
     <configuration name="NedoAvitoApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

@@ -1,0 +1,26 @@
+version: "3"
+services:
+#  Create a service named db.
+  db:
+    image: "postgres"
+    container_name: "my_postgres"
+    environment:
+      - POSTGRES_USER=test_user
+      - POSTGRES_PASSWORD=qwerty
+      - POSTGRES_DB=api
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+  db2:
+    image: "postgres"
+    container_name: "my_postgres2"
+    environment:
+      - POSTGRES_USER=test_user
+      - POSTGRES_PASSWORD=qwerty
+      - POSTGRES_DB=secure
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data2
