@@ -39,10 +39,10 @@ public class TagService {
         //выдать корневой тэг, иначе пустой объект
         return tagDaoIm.findByLevel(0).orElseGet(() -> new Tag());
     }
-    //пример отдачи строк
+    //пример отдачи элимента
     @GraphQLQuery
-    public String test(@GraphQLArgument(name = "testLine") String testLine) {
-        return testLine;
+    public User test(@GraphQLArgument(name = "testLine") String testLine) {
+        return new User(testLine, "phone", "photo", null, null);
     }
     //пример отдачи сложной структуры
     @GraphQLQuery
