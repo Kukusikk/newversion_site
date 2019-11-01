@@ -21,7 +21,7 @@ public class Tag {
     private Tag parenttag ;//= new Tag();
     //дочернии тэги
     //при удалении родительского тэга должны удаляться дочернии
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy="parenttag")
     private Set<Tag> childCategory = new HashSet<>();
     //уровень тэга
     int level;

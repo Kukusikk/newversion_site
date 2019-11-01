@@ -1,32 +1,30 @@
+
+
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+
+      <table width="100%" >
+        <tr>
+          <td  width="33.3%" align="left"><router-link to="/Сreatepost">Разместить объявление</router-link></td>
+          <td width="33.3%" align="center"><router-link to="/">Главная</router-link></td>
+          <td width="33.3%" align="right"> тут будет компонент контекстная кнопка но она еще не сделана</td>
+        </tr>
+      </table>
+
+      <table width="100%" >
+        <tr>
+          <td  width="10%" ></td>
+          <td width="70%" align="center"><router-view/></td>
+          <td width="20%" align="right">  <tagTree></tagTree> </td>
+        </tr>
+      </table>
+      <p>поле для тестирования:<testlistgraphql></testlistgraphql>></p>
+
+
+
+
+
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>

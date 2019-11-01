@@ -30,6 +30,7 @@ public class TagService {
     public void deleteTag(Tag tag){tagDaoIm.delete(tag);}
     //удалить тэг по id
     public void deleteTagById(UUID id){tagDaoIm.deleteById(id);}
+    @GraphQLQuery
     //выдать все тэги
     public List<Tag> findAllTags(){ return tagDaoIm.findAll();}
     //выдать корневой тэг
@@ -37,22 +38,33 @@ public class TagService {
     @GraphQLQuery
     public Tag findRootTag(){
         //выдать корневой тэг, иначе пустой объект
+        List<Tag> test2=tagDaoIm.findAll();
+        Tag test=tagDaoIm.findByLevel(0).orElseGet(() -> new Tag());
         return tagDaoIm.findByLevel(0).orElseGet(() -> new Tag());
     }
+    //--------------------------------------------------------------------------------------------------------------------------------------------
+    //тестирование графкуель
     //пример отдачи элимента
     @GraphQLQuery
     public User test(@GraphQLArgument(name = "testLine") String testLine) {
-        return new User(testLine, "phone", "photo", null, null);
+        User user= new User(testLine, "testphone", "testphoto", null, null);
+        user.setIduser(UUID.randomUUID());
+        return user;
+
     }
     //пример отдачи сложной структуры
     @GraphQLQuery
     public ArrayList<User> testList(@GraphQLArgument(name = "testname1") String testname1,@GraphQLArgument(name = "testname2") String testname2 ) {
         ArrayList<User> testlist = new ArrayList<User>();
-        testlist.add(new User(testname1, "phone", "photo", null, null));
-        testlist.add(new User(testname2, "phone", "photo", null, null));
+        User user1=new User(testname1, "myphone1", "myphoto1",  new HashSet<>(), new HashSet<>());
+        user1.setIduser(UUID.randomUUID());
+        testlist.add(user1);
+        User user2=new User(testname2, "myphone2", "myphoto2",  new HashSet<>(), new HashSet<>());
+        user2.setIduser(UUID.randomUUID());
+        testlist.add(user2);
         return testlist;
     }
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------
     //добавить тэг
     public Tag saveTag(Tag tag){return tagDaoIm.save(tag);}
 
