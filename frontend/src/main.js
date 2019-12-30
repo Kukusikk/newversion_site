@@ -5,11 +5,12 @@ import apolloProvider from './graphqlserver'
 import router from './router'
 import tagTree from './components/tagTree'
 import testlistgraphql from './components/testlistgraphql'
-
+import searchLine from './components/searchLine'
 Vue.config.productionTip = false
 
 Vue.component('testlistgraphql', testlistgraphql);
 Vue.component('tagTree', tagTree);
+Vue.component('searchLine', searchLine);
 
 new Vue({
   router,

@@ -39,7 +39,9 @@ public class AdvertisementDaoImpl implements AdvertisementDao {
 
 
 
-    public List<Advertisement> findByFilterByDate(String name, int topprice, int lowprice, Set<Tag> tags){return advertisementRepository.findByFilterByDate( name,  topprice,  lowprice,tags);}
+    public List<Advertisement> findByFilterByDate(String name, int topprice, int lowprice, Set<Tag> tags){
+        Optional<Advertisement> u= advertisementRepository.findByFilterByDate( name,  topprice,  lowprice/*,tags*/);
+         return advertisementRepository.findAll();}
     public List<Advertisement> findByFilterByNumberviews( String name, int topprice, int lowprice, Set<Tag> tags){return advertisementRepository.findByFilterByNumberviews( name,  topprice,  lowprice,tags);}
     public List<Advertisement> findByFilterByPrice( String name, int topprice, int lowprice, Set<Tag> tags){return advertisementRepository.findByFilterByPrice( name,  topprice,  lowprice,tags);}
 

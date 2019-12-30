@@ -12,3 +12,91 @@ query AllLinksQuery {
   }
 }
   `
+
+export const FINDALLTAGS_QUERY = gql`
+query findAllTags {
+  findAllTags {
+    idtag
+    level
+    name
+  }
+}
+  `
+
+/*export const FINDROOTTAG = gql`
+query{
+  findRootTag{
+    childCategory{
+      childCategory{
+        childCategory{
+          childCategory{
+            childCategory{
+              idtag
+              level
+              name
+            }
+            idtag
+            level
+            name
+          }
+          idtag
+          level
+          name
+        }
+        idtag
+        level
+        name
+      }
+      idtag
+      level
+      name
+    }
+    idtag
+    level
+    name
+  }
+}
+  `
+
+
+
+*/
+
+
+export const FINDROOTTAG = gql`
+query findRootTag {
+  findRootTag{
+    childCategory{
+      childCategory{
+        childCategory{
+          childCategory{
+            childCategory{
+              idtag
+              level
+              name
+            }
+            idtag
+            level
+            name
+          }
+          idtag
+          level
+          name
+        }
+        idtag
+        level
+        name
+      }
+      idtag
+      level
+      name
+    }
+    idtag
+    level
+    name
+  }
+}`
+
+
+
+

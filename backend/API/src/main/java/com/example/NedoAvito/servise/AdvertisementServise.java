@@ -3,12 +3,14 @@ package com.example.NedoAvito.servise;
 import com.example.NedoAvito.conteiner.Filter;
 import com.example.NedoAvito.dao.Advertisement.AdvertisementDaoImpl;
 import com.example.NedoAvito.entity.Advertisement;
+import com.example.NedoAvito.entity.Tag;
 import com.example.NedoAvito.entity.User;
 import io.leangen.graphql.annotations.GraphQLQuery;
 import io.leangen.graphql.spqr.spring.annotations.GraphQLApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.validation.constraints.Null;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -19,6 +21,8 @@ public class AdvertisementServise {
     AdvertisementDaoImpl advertisementdao;
     @Autowired
     TagService tagService;
+    @Autowired
+    UserService userService;
 
     //сохранить объявление
     public Advertisement saveAdvertisement(Advertisement advertisement) {
@@ -41,51 +45,87 @@ public class AdvertisementServise {
     }
 
     // выдать все объявление по заданному в поисковике фильтру
+    @GraphQLQuery
     public List<Advertisement> AdvertisementsByFiltersearch(Filter filter) {
         List<Advertisement> advertisements = new ArrayList<>();
-
+        List<Advertisement> result = new ArrayList<>();
+    //    result= findAdvertisementsByOrderByNumberviewsDesc();
+        boolean n=filter.getUsefilter();
+   //     if (!n){
+   //         System.out.println(9);
+//            return result;
+//        }
+        boolean help=false;
         switch (filter.getSortingprinciple()) {
-            case popularity:
+            case 0:
                 //выдача с ценой+имя+наличие в тэге+сортировка по популярности
-                advertisements = advertisementdao.findByFilterByNumberviews(filter.getName(), filter.getTopprice(), filter.getLowerprice(), tagService.findAllChildTagsforSet(filter.getTags(), new HashSet<>()));
+                advertisements = advertisementdao.findAllByOrderByNumberviewsDesc();
                 break;
-            case age:
-                //выдача с ценой+имя+наличие в тэге+сортировка по дате
-                advertisements = advertisementdao.findByFilterByDate(filter.getName(), filter.getTopprice(), filter.getLowerprice(), tagService.findAllChildTagsforSet(filter.getTags(), new HashSet<>()));
+            case 2:
+                advertisements=advertisementdao.findAllByOrderByDateAsc();
                 break;
-            case price:
+
+            case 1:
                 //выдача c ценой+имя+наличие в тэге+сортировка по цене
-                advertisements = advertisementdao.findByFilterByPrice(filter.getName(), filter.getTopprice(), filter.getLowerprice(), tagService.findAllChildTagsforSet(filter.getTags(), new HashSet<>()));
+                advertisements = advertisementdao.findAllByOrderByPriceAsc();
                 break;
         }
+        //выдача с ценой+имя+наличие в тэге+сортировка по дате\
+        Set<UUID>a=filter.getIdtag();
+        Set <Tag> x= new HashSet<>();
+        //если был выбран хоть какой то тэг
+        if (a.size()>0){
+        Set<Tag> z=tagService.findTagsByIdes(filter.getIdtag());
+        x=tagService.findAllChildTagsforSet(z,new HashSet<>());}
 
-        //проверяем наличие слов в описании
-        for (Advertisement advertisement : advertisements) {
-            for (String world : filter.getFordiscription()) {
-                //идем по слову в описании и находим его в строке описания товара
-                if (!advertisement.getDescription().contains(world)) {
-                    //если не нашли это слово в описании
-                    advertisements.remove(advertisement);
-                    break;
-                }
+
+        for(Advertisement i: advertisements){
+            if (!i.getName().toLowerCase().contains(filter.getName().toLowerCase())){
+//            if(!i.getName().equals(filter.getName())){
+                if (filter.getName().length()!=0){
+                continue;}
+                //         advertisements.remove(i);
             }
+            if(i.getPrice()>filter.getTopprice()){
+                if (filter.getTopprice()!=0){
+                continue;}
+                //               advertisements.remove(i);
+            }
+            if(i.getPrice()<filter.getLowerprice()){
+                if(filter.getLowerprice()!=0){
+                continue;}
+                //              advertisements.remove(i);
+            }
+            if (n){
+            for (Tag j : x){
+
+                if (j.getIdtag().equals(i.getTag().getIdtag())){
+                    help=true;
+                    break;}
+            }
+            if(!help) {
+                continue;
+                //                   advertisements.remove(i);
+            }}
+            result.add(i);
 
         }
-        return advertisements;
+
+        return result;
 
     }
 
-
+    @GraphQLQuery
     // удалить все объявления клиента
     public void deleteAdvertisementByUser(User user) {
         advertisementdao.deleteByUser(user);
     }
-
+    @GraphQLQuery
     // удалить конкретное объявление относительно юзера
     public void deleteAdvertisementByUserAndIdForUser(User user, Integer idForUser) {
         advertisementdao.deleteByUserAndIdForUser(user, idForUser);
     }
-
+    @GraphQLQuery
     // удалить объявление
     public void deleteAdvertisement(Advertisement advertisement) {
         advertisementdao.delete(advertisement);

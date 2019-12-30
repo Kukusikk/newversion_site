@@ -26,28 +26,30 @@ public class User {
     //одно объявление может быть во многих корзинах
     //в одной корзине может быть много объявлений
     //однонаправленный
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "Users_Advertisements",
-            joinColumns = { @JoinColumn(name = "iduser") },
-            inverseJoinColumns = { @JoinColumn(name = "idAdvertisement") })
-    private Set<Advertisement> cart = new HashSet<>();
+//    @ManyToMany(fetch = FetchType.EAGER)
+//    @JoinTable(name = "Users_Advertisements",
+//            joinColumns = { @JoinColumn(name = "iduser") },
+//            inverseJoinColumns = { @JoinColumn(name = "idAdvertisement") })
+//    private Set<Advertisement> cart = new HashSet<>();
 
 
-    public User(String login, String phone, String photo, Set<Advertisement> cart, Set<Advertisement> advertisements) {
+    public User(String login, String phone, String photo) {
         this.login = login;
         this.phone = phone;
         this.photo = photo;
-        this.cart = cart;
-        this.advertisements = advertisements;
+ //       this.cart = new HashSet<>();
+        this.advertisements = new HashSet<>();
     }
     public User(){}
 
     //ссылки на объявления этого пользователя
     //один пользователь имеет много объявлений. одно объявление имеет одного хозяина
     //при удалении юзера автоматом удалять все его сообщения
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<Advertisement> advertisements = new HashSet<>();
+    @OneToMany(/*cascade = CascadeType.ALL*/ fetch = FetchType.EAGER)
+//    @OneToMany(fetch = FetchType.EAGER)
 
+    private Set<Advertisement> advertisements = new HashSet<>();
+    public void havenewadversiment(Advertisement a){ advertisements.add(a);}
     public UUID getIduser() {
         return iduser;
     }
@@ -80,13 +82,13 @@ public class User {
         this.photo = photo;
     }
 
-    public Set<Advertisement> getCart() {
-        return cart;
-    }
+//    public Set<Advertisement> getCart() {
+//        return cart;
+//    }
 
-    public void setCart(Set<Advertisement> cart) {
-        this.cart = cart;
-    }
+//    public void setCart(Set<Advertisement> cart) {
+//        this.cart = cart;
+//    }
 
     public Set<Advertisement> getAdvertisements() {
         return advertisements;

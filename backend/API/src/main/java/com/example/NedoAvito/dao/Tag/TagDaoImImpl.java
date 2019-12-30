@@ -20,7 +20,7 @@ public class TagDaoImImpl implements  TagDao{
     //выдать тэги заданного уровня
     public List<Tag> findAllByLevel(int level){return tagRepository.findAllByLevel(level);}
     //выдать тэг с заданным id
-    public Optional<Tag> findById(UUID id){return tagRepository.findById(id);}
+    public Optional<Tag> findById(UUID id){return tagRepository.findByIdtag(id);}
     //добавить категорию
     public Tag save(Tag tag){return tagRepository.save(tag);}
     //выдать тэг с заданным уровнем

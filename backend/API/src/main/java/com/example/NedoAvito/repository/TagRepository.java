@@ -17,7 +17,7 @@ public  interface TagRepository extends CrudRepository<Tag, UUID> {
     //выдать тэги заданного уровня
     List<Tag> findAllByLevel(int level);
     //выдать тэг с заданным id
-    Optional<Tag> findById(UUID id);
+    Optional<Tag> findByIdtag(UUID id);
     //добавить категорию
     Tag save(Tag tag);
     //выдать тэг с заданным уровнем

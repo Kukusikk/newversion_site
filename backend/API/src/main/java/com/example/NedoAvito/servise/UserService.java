@@ -18,6 +18,7 @@ public class UserService {
     @Autowired
     private UserDaoImpl userdao;
     //создать нового юзера
+
     public User save(User user){return userdao.save(user);}
     //показать всех клиентов
     public List<User> findAll() {
@@ -53,11 +54,11 @@ public class UserService {
     }
 
 
-    //выдать корзину клиента по его логину
-    public Set<Advertisement> findByLoginCart(String login) {
-        User u = userdao.findByLogin(login).orElse(new User());
-        return u.getCart();
-    }
+//    //выдать корзину клиента по его логину
+//    public Set<Advertisement> findByLoginCart(String login) {
+//        User u = userdao.findByLogin(login).orElse(new User());
+//        return u.getCart();
+//    }
 
     //удаление всех клиентов
     public void deleteAll() {

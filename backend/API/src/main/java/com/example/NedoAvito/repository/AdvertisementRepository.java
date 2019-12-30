@@ -39,8 +39,9 @@ public  interface AdvertisementRepository extends CrudRepository<Advertisement, 
     @Query("select a from Advertisement a where a.name = ?1 and ((?2>=0 and a.price<=?2) or (?3>=0 and a.price>=?3)) and (a.tag in ?4 ) order by a.numberviews ")
     List<Advertisement> findByFilterByNumberviews( String name, int topprice, int lowprice, Set<Tag> tags );
     //выдать объявления отфильтрованныйе по фильтру и новизне
-    @Query("select a from Advertisement a where a.name = ?1 and ((?2>=0 and a.price<=?2) or (?3>=0 and a.price>=?3)) and (a.tag in ?4 ) order by a.date ")
-    List<Advertisement> findByFilterByDate( String name, int topprice, int lowprice, Set<Tag> tags);
+//    @Query("select a from Advertisement a where a.name = ?1 and ((?2>=0 and a.price<=?2) or (?3>=0 and a.price>=?3)) and (a.tag in ?4 ) order by a.date ")
+    @Query("select a from Advertisement a where a.name = ?1 and ((?2>=0 and a.price<=?2) or (?3>=0 and a.price>=?3))")
+    Optional<Advertisement> findByFilterByDate( String name, int topprice, int lowprice/*, Set<Tag> tags*/);
     //выдать объявления отфильтрованныйе по фильтру и цене
     @Query("select a from Advertisement a where a.name = ?1 and ((?2>=0 and a.price<=?2) or (?3>=0 and a.price>=?3)) and (a.tag in ?4 ) order by a.price ")
     List<Advertisement> findByFilterByPrice( String name, int topprice, int lowprice, Set<Tag> tags);

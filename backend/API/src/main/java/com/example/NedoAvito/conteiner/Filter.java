@@ -6,25 +6,42 @@ import com.example.NedoAvito.entity.Tag;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 //класс, объект которого создается при вводе поисковых фильтров на стороне клиента
 public class Filter {
     //название поискового объекта
     String name;
-    //слова в описании, совпадение с которыми будем искать в описании объекта
-    List<String> fordiscription;
+
     //все дерево тэгов со своими дочерними тэгами
-    Set<Tag> tags=new HashSet<>();
+    private Set<UUID> idtags=new HashSet<>();
+
     //верхняя граница цены
     Integer topprice;
     //нижняя граница цена
     Integer lowerprice;
     //принцип сортировки
-    SortingPrinciple sortingprinciple;
-    Filter(){
-        this.topprice=this.lowerprice=-1;
-        this.sortingprinciple=SortingPrinciple.popularity;
+    Integer sortingprinciple;
+    //надо ли использовать этот фильтр
+    boolean usefilter;
+
+    public boolean getUsefilter() {
+        return usefilter;
     }
+
+    public void setUsefilter(boolean usefilter) {
+        this.usefilter = usefilter;
+    }
+
+    public Filter(boolean usefilter, Integer Topprice, Integer Lowprice, Integer SortingPrincipl, String Name, Set<UUID> Idtags){
+        this.usefilter=usefilter;
+        this.topprice=Topprice;
+        this.sortingprinciple=SortingPrincipl;
+        this.lowerprice=Lowprice;
+        this.idtags=Idtags;
+        this.name=Name;
+    }
+
 
     public String getName() {
         return name;
@@ -34,20 +51,12 @@ public class Filter {
         this.name = name;
     }
 
-    public List<String> getFordiscription() {
-        return fordiscription;
+    public Set<UUID> getIdtag() {
+        return idtags;
     }
 
-    public void setFordiscription(List<String> fordiscription) {
-        this.fordiscription = fordiscription;
-    }
-
-    public Set<Tag> getTags() {
-        return tags;
-    }
-
-    public void setTags(Set<Tag> tags) {
-        this.tags = tags;
+    public void setIdtag(Set<UUID> idtag) {
+        this.idtags = idtag;
     }
 
     public Integer getTopprice() {
@@ -66,11 +75,11 @@ public class Filter {
         this.lowerprice = lowerprice;
     }
 
-    public SortingPrinciple getSortingprinciple() {
+    public Integer getSortingprinciple() {
         return sortingprinciple;
     }
 
-    public void setSortingprinciple(SortingPrinciple sortingprinciple) {
+    public void setSortingprinciple(Integer sortingprinciple) {
         this.sortingprinciple = sortingprinciple;
     }
 }

@@ -13,9 +13,9 @@
 
       <table width="100%" >
         <tr>
-          <td  width="10%" ></td>
-          <td width="70%" align="center"><router-view/></td>
-          <td width="20%" align="right">  <tagTree></tagTree> </td>
+          <td  width="5%" ></td>
+          <td width="65%" align="center"><router-view/></td>
+          <td width="30%" align="left">  <tagTree></tagTree> </td>
         </tr>
       </table>
       <p>поле для тестирования:<testlistgraphql></testlistgraphql>></p>

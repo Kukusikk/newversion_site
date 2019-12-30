@@ -1,5 +1,8 @@
 package com.example.NedoAvito.entity;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -8,19 +11,24 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Entity
+
 @Table(name = "Tags")
 public class Tag {
     @Id
   //  @Column(name="id")
+    @JsonProperty
     @GeneratedValue(strategy= GenerationType.AUTO)
     private UUID idtag;
     @Column(unique=true)
+    @JsonProperty
     private String name;
     //родительский тэг
     @OneToOne
+    @JsonProperty
     private Tag parenttag ;//= new Tag();
     //дочернии тэги
     //при удалении родительского тэга должны удаляться дочернии
+    @JsonProperty
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy="parenttag")
     private Set<Tag> childCategory = new HashSet<>();
     //уровень тэга
@@ -29,6 +37,7 @@ public class Tag {
     //объявление принадлежит одному тэгу
     //один тэг принадлежит многим объявлениям
     @OneToMany(fetch = FetchType.EAGER)
+    @JsonProperty
     private Set<Advertisement> advertisements=new HashSet<>();
     public Tag(){}
     //создание нового тэга
@@ -39,6 +48,7 @@ public class Tag {
         this.parenttag = parenttag;
         this.childCategory = null;
         this.advertisements = null;
+        this.advertisements=new HashSet<>();
 
         if (parenttag!=null){
             this.level=1+parenttag.getLevel();

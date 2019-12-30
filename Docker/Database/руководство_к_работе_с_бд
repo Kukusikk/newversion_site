@@ -4,5 +4,5 @@
 удаление контейнера       sudo docker-compose down
 
 
-обращение к бд api        sudo psql -h localhost  -U test_user -d api
+обращение к бд api        sudo psql -h localhost  -U test_user -d api	
 обращение к бд secure     sudo psql -h localhost  -p 5433 -U test_user -d secure

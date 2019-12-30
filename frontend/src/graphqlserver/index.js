@@ -14,7 +14,7 @@ Vue.config.productionTip = false
 // 3
 const httpLink = new HttpLink({
     // You should use an absolute URL here
-    uri: 'http://localhost:8080/graphql'
+    uri: 'http://localhost:8088/graphql'
 })
 
 // 4

@@ -14,9 +14,10 @@ public class Advertisement {
  //   @Column(name="id")
     private UUID idAdvertisement;//номер в общем риестре записей
   //  много объявлений принадлежат одному юзеру
-    @NotNull
-    @OneToOne (fetch = FetchType.EAGER)//при удалении пользователя удаляются его объявления
-    @JoinColumn(name = "idAdvertisement")
+ //   @NotNull
+//    @OneToOne (fetch = FetchType.EAGER)//при удалении пользователя удаляются его объявления
+   @ManyToOne
+    @JoinColumn(name = "user_iduser")
     private User user= new User();
     private int idForUser;//номер относительно ее автора
     private int price;
@@ -28,7 +29,7 @@ public class Advertisement {
     private int numberviews;
     //много объявлений принадлежат одному тэгу
     @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "idAdvertisement")
+    @JoinColumn(name = "idAadvertisement")
     //здесь хрениться один тэг - самый дочерний
     private Tag tag= new Tag();
     //
@@ -52,17 +53,19 @@ public class Advertisement {
         this.date = date;
     }
 
-    public Advertisement(@NotNull User user) {
+    public Advertisement(@NotNull User user, int price, String name,Tag t) {
 
         this.user = user;
         this.idForUser = 8;
-        this.price = 6;
-        this.name = "j";
+        this.price = price;
+        this.name = name;
         this.description = "description";
         this.numberviews = 3;
+        this.tag=t;
 
 
     }
+
 
     public UUID getId() {
         return idAdvertisement;
@@ -71,7 +74,8 @@ public class Advertisement {
     public void setId(UUID idAdvertisement) {
         this.idAdvertisement = idAdvertisement;
     }
-
+//    @ManyToOne
+//    @JoinColumn(name = "idAdvertisement")
     public User getUser() {
         return user;
     }

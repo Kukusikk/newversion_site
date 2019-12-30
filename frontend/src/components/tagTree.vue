@@ -1,19 +1,32 @@
+{link.iduser}}  -
 <template>
-    <div class="tagTree">
-        <h1>This is {{msg}} но он еще не готов</h1>
+    <div>
+
+        <oneTag
+                :tag="findRootTag">eeeeeeeeeeee
+        </oneTag>
     </div>
 </template>
 
 <script>
+    import oneTag from './oneTag'
+    import { FINDROOTTAG } from '../constants/graphql'
+
     export default {
+        name: 'tagTree',
         data () {
             return {
-                msg: 'tagTree'
+                findRootTag: {},
+                loading: 0
+            }
+        },
+        components: {
+            oneTag
+        },
+        apollo: {
+            findRootTag: {
+                query: FINDROOTTAG
             }
         }
-}
+    }
 </script>
-
-<style scoped>
-
-</style>

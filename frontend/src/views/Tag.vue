@@ -1,6 +1,6 @@
 <template>
     <div class="tag">
-        <h1>This is an Tag page</h1>
+        <h1>This is an Tag page for {{route.params.id}} </h1>
     </div>
     
 </template>

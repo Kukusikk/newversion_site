@@ -12,6 +12,14 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.example.NedoAvito.conteiner.*;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
+
+import static com.example.NedoAvito.conteiner.SortingPrinciple.age;
 
 @SpringBootApplication
 public class NedoAvitoApplication implements ApplicationRunner {
@@ -52,18 +60,78 @@ public class NedoAvitoApplication implements ApplicationRunner {
 		Tag tag18=tagService.createTag("automatic", tag13);
 
 
+		User user0=new User("login", "phone", "photo");
+		userService.save(user0);
+		Advertisement advertisement1=new Advertisement(user0, 578,"AAA",tag8);
+
+		advertisementServis.saveAdvertisement(advertisement1 );
+
+		tag8.getAdvertisements().add(advertisement1);
+		tagService.update(tag8);
+
+		user0.getAdvertisements().add(advertisement1);
+		userService.save(user0);
+
+
+
+
+
+
+
 //		Set<Tag> result=tagService.findAllChildTagsforone(tag0);
 //		Advertisement a=new Advertisement(userService.save(new User()));
 //		Tag t=tagService.save(new Tag());
 //		a.setTag(t);
 //		advertisementServis.save(a);
 
-		System.out.print("8");
 
 
 
+		Set<UUID> result=new HashSet<>();
+		UUID uuid = tag0.getIdtag();
+//		UUID uuid= UUID.nameUUIDFromBytes("4120b90b-1924-430b-9208-1e9f9909ab42".getBytes("UTF-8"));
+		result.add(uuid);
+		Filter f=new Filter(false,3234, 300, 1, "AAA", result);
+//
+		List<Advertisement>a= advertisementServis.AdvertisementsByFiltersearch(f);
+		System.out.print("-------------------------------------------------------------8--------------------------");
 
 
+		//???????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+		User user1=new User("login2", "phone", "photo");
+		userService.save(user1);
+		Advertisement advertisement2=new Advertisement(user1, 578,"AAA",tag7);
+//		user0.getAdvertisements().add(advertisement1);
+
+		advertisementServis.saveAdvertisement(advertisement2 );
+
+		tag7.getAdvertisements().add(advertisement2);
+		tagService.update(tag7);
+
+		user1.getAdvertisements().add(advertisement2);
+		userService.save(user1);
+
+
+//nikita
+		Tag[] tags = new Tag[] {tag6,tag9,tag10,tag11,tag12,tag13,tag14,tag15,tag16,tag17,tag18};
+		for(int i = 0; i < 6; ++i) {
+			User iuser = new User("loginaaa" + Integer.toString(i), "phone", "photo");
+			userService.save(iuser);
+			Advertisement iadvertisement = new Advertisement(iuser, 578, "AAA", tags[i]);
+//		user0.getAdvertisements().add(advertisement1);
+
+			advertisementServis.saveAdvertisement(iadvertisement);
+
+			tags[i].getAdvertisements().add(iadvertisement);
+			tagService.update(tags[i]);
+
+			iuser.getAdvertisements().add(iadvertisement);
+			userService.save(iuser);
+		}
+
+
+//		?????????????????????????????????????????????????????????????????????????????????????????????????????
 
 
 

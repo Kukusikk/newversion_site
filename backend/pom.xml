@@ -33,6 +33,16 @@
 
 	<build>
 		<plugins>
+<!--			<plugin>-->
+<!--				<groupId>org.apache.tomcat.maven</groupId>-->
+<!--				<artifactId>tomcat7-maven-plugin</artifactId>-->
+<!--					<configuration>-->
+<!--						<port>8080</port>-->
+<!--&lt;!&ndash;					<url>http://localhost:8080/manager</url>&ndash;&gt;-->
+<!--&lt;!&ndash;					<server>localhost</server>&ndash;&gt;-->
+<!--					<path>/</path>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
